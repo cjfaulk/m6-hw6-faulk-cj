@@ -25,12 +25,21 @@ messageOne.innerHTML = "Ooh - so close, but no cigar";
 
 document.getElementById("one").addEventListener("click",
   function() {
-    document.getElementById("boxes").appendChild(messageOne);
+    document.getElementById("main").appendChild(messageOne);
   }, false
 );
 
 
 // Part iii: box #2 click
+
+var messageTwo = document.createElement("p");
+messageTwo.innerHTML = "Ding Ding Ding - We have a winner!";
+
+document.getElementById("two").addEventListener("click",
+  function() {
+    document.getElementById("main").appendChild(messageTwo);
+  }, false
+);
 
 
 

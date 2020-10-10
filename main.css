@@ -69,7 +69,10 @@ a {
   background-color: #a5ff01;
 }
 
-.startover {
+footer {
   margin-top: 50px;
+}
+
+.startover {
   display: none;
 }
