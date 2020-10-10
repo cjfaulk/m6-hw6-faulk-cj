@@ -18,6 +18,7 @@ function boxBackgroundTwo() {
   return false;
 };
 
+
 // Part ii: box #1 click
 
 var messageOne = document.createElement("p");
@@ -42,9 +43,16 @@ document.getElementById("two").addEventListener("click",
 );
 
 
-
 // Part iv: box #3 click
 
+var messageThree = document.createElement("p");
+messageThree.innerHTML = "Oops, better luck next time";
+
+document.getElementById("three").addEventListener("click",
+  function() {
+    document.getElementById("main").appendChild(messageThree);
+  }, false
+);
 
 
 // Part v: start over button
