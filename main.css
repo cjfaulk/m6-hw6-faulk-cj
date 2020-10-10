@@ -29,14 +29,22 @@ h2 {
   margin: 20px auto;
 }
 
-.boxes {
+a {
+  color: white;
+  text-decoration: none;
+  background-color: #6003c3;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+#boxes {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 }
 
-.number {
+.box {
   font-size: 8rem;
   height: 200px;
   width: 200px;
@@ -59,4 +67,8 @@ h2 {
 
 .three {
   background-color: #a5ff01;
+}
+
+.startover {
+  /* display: none; */
 }
