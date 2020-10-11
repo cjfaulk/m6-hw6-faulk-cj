@@ -73,6 +73,14 @@ footer {
   margin-top: 50px;
 }
 
-.startover {
+#startover {
   display: none;
+}
+
+.show {
+  display: block;
+}
+
+.orange {
+  background-color: #FFA500;
 }

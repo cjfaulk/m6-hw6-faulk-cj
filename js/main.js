@@ -1,22 +1,37 @@
 // Part i: hover highlights boxes with a different background color
 
-document.getElementById("one").addEventListener("mouseenter", boxBackground);
-document.getElementById("two").addEventListener("mouseenter", boxBackground);
-document.getElementById("three").addEventListener("mouseenter", boxBackground);
+var boxHover = document.getElementsByClassName("box");
+console.log(boxHover);
 
-function boxBackground() {
-  this.style.backgroundColor = "#FFA500";
-  return false;
+function toggleColor() {
+  for (i=0; i < boxHover.length; i++) {
+    boxHover[i].classList.toggle("orange");
+  }
 };
 
-document.getElementById("one").addEventListener("mouseleave", boxBackgroundTwo);
-document.getElementById("two").addEventListener("mouseleave", boxBackgroundTwo);
-document.getElementById("three").addEventListener("mouseleave", boxBackgroundTwo);
-
-function boxBackgroundTwo() {
-  this.style.backgroundColor = "";
-  return false;
+for (i=0; i<boxHover.length; i++) {
+  boxHover[i].addEventListener("mouseenter", toggleColor);
+  boxHover[i].addEventListener("mouseleave", toggleColor);
 };
+
+
+// document.getElementById("one").addEventListener("mouseenter", boxBackground);
+// document.getElementById("two").addEventListener("mouseenter", boxBackground);
+// document.getElementById("three").addEventListener("mouseenter", boxBackground);
+//
+// function boxBackground() {
+//   this.style.backgroundColor = "#FFA500";
+//   return false;
+// };
+//
+// document.getElementById("one").addEventListener("mouseleave", boxBackgroundTwo);
+// document.getElementById("two").addEventListener("mouseleave", boxBackgroundTwo);
+// document.getElementById("three").addEventListener("mouseleave", boxBackgroundTwo);
+//
+// function boxBackgroundTwo() {
+//   this.style.backgroundColor = "";
+//   return false;
+// };
 
 
 // Part ii: box #1 click
@@ -56,3 +71,13 @@ document.getElementById("three").addEventListener("click",
 
 
 // Part v: start over button
+
+// var boxClick = document.getElementsByClassName("box");
+// console.log(boxClick);
+//
+// var startOver = document.getElementById("startover");
+// console.log(startOver);
+//
+// function toggleStart () {
+//   boxClick[0].classList.toggle("show");
+// };
