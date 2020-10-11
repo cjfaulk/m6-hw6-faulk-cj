@@ -14,26 +14,6 @@ for (i=0; i<boxHover.length; i++) {
   boxHover[i].addEventListener("mouseleave", toggleColor);
 };
 
-
-// document.getElementById("one").addEventListener("mouseenter", boxBackground);
-// document.getElementById("two").addEventListener("mouseenter", boxBackground);
-// document.getElementById("three").addEventListener("mouseenter", boxBackground);
-//
-// function boxBackground() {
-//   this.style.backgroundColor = "#FFA500";
-//   return false;
-// };
-//
-// document.getElementById("one").addEventListener("mouseleave", boxBackgroundTwo);
-// document.getElementById("two").addEventListener("mouseleave", boxBackgroundTwo);
-// document.getElementById("three").addEventListener("mouseleave", boxBackgroundTwo);
-//
-// function boxBackgroundTwo() {
-//   this.style.backgroundColor = "";
-//   return false;
-// };
-
-
 // Part ii: box #1 click
 
 var messageOne = document.createElement("p");
@@ -72,12 +52,14 @@ document.getElementById("three").addEventListener("click",
 
 // Part v: start over button
 
-// var boxClick = document.getElementsByClassName("box");
-// console.log(boxClick);
-//
-// var startOver = document.getElementById("startover");
-// console.log(startOver);
-//
-// function toggleStart () {
-//   boxClick[0].classList.toggle("show");
-// };
+var startButton = document.getElementById("startover");
+console.log(startButton);
+
+function startOver() {
+  startButton.classList.remove("hide");
+  startButton.classList.add("show");
+};
+
+for (i=0; i<boxHover.length; i++) {
+  boxHover[i].addEventListener("click", startOver);
+};

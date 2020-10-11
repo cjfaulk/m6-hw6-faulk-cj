@@ -73,7 +73,7 @@ footer {
   margin-top: 50px;
 }
 
-#startover {
+.hide {
   display: none;
 }
 
